@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ShramSaathi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><div><h1>🤝 ShramSaathi</h1><small data-i="tag"></small></div>
+<div class="hr"><span id="uchip" hidden></span><button id="out" hidden data-i="logout"></button><select id="lang" aria-label="Language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select></div></header>
+<div id="auth"><div class="acard"><h1>🤝 ShramSaathi</h1><p data-i="tag"></p>
+<div class="tabs"><button id="tl" class="on" data-i="login"></button><button id="tr2" data-i="register"></button></div>
+<div id="rf" hidden><label data-i="fname"></label><input id="an"><label data-i="wtype"></label><select id="at"><option value="1" data-i="wt1"></option><option value="2" data-i="wt2"></option><option value="3" data-i="wt3"></option><option value="4" data-i="wt4"></option><option value="5" data-i="wt5"></option><option value="6" data-i="wt6"></option></select></div>
+<label data-i="uname"></label><input id="au" autocomplete="username" autocapitalize="none">
+<label data-i="pass"></label><input id="ap" type="password" autocomplete="current-password">
+<p id="amsg" class="bad"></p><button id="authBtn" data-i="login"></button>
+<select id="lang2" aria-label="Language" style="margin-top:16px"><option value="en">English</option><option value="hi">हिन्दी</option><option value="mr">मराठी</option></select></div></div>
+<main>
+
+<section id="home">
+<div class="card" id="wel" hidden></div>
+<div class="hero"><h2 data-i="h_t"></h2><p data-i="h_p"></p><a href="#tracker" data-i="start"></a></div>
+<div class="grid">
+<a class="tile" href="#tracker"><span>💰</span><b data-i="n_tracker"></b></a>
+<a class="tile" href="#deductions"><span>🧾</span><b data-i="n_ded"></b></a>
+<a class="tile" href="#rights"><span>⚖️</span><b data-i="n_rights"></b></a>
+<a class="tile" href="#documents"><span>📁</span><b data-i="n_docs"></b></a>
+<a class="tile" href="#help"><span>📞</span><b data-i="n_help"></b></a></div>
+<div class="card"><h2 class="t" data-i="al_t"></h2><p>🔔 <span data-i="al1"></span></p><p>📸 <span data-i="al2"></span></p></div>
+</section>
+
+<section id="tracker">
+<div class="card"><h2 class="t">💰 <span data-i="n_tracker"></span></h2>
+<label data-i="work"></label><input id="tw">
+<div class="row"><div><label data-i="prom"></label><input id="tp" type="number" min="0"></div>
+<div><label data-i="recv"></label><input id="tr" type="number" min="0" value="0"></div></div>
+<label data-i="due"></label><input id="td" type="date">
+<button id="add" data-i="add"></button></div>
+<div class="card"><div class="row"><div><div data-i="owed" style="color:var(--mu)"></div><div class="big" id="owed">₹0</div></div>
+<div><div data-i="over" style="color:var(--mu)"></div><div class="big bad" id="ovc">0</div></div></div></div>
+<div class="card"><div id="list"></div><button id="copy" data-i="copy"></button> <span id="cmsg"></span></div>
+</section>
+
+<section id="deductions">
+<div class="card"><h2 class="t">🧾 <span data-i="n_ded"></span></h2>
+<label data-i="earn"></label><input id="de" type="number" min="0">
+<label data-i="comm"></label><input id="dc" type="number" min="0" value="0">
+<label data-i="pen"></label><input id="dp" type="number" min="0" value="0">
+<label data-i="fee"></label><input id="df" type="number" min="0" value="0">
+<button id="calc" data-i="calc"></button></div>
+<div class="card" id="dres" hidden></div>
+</section>
+
+<section id="rights">
+<div class="card"><h2 class="t">⚖️ <span data-i="n_rights"></span></h2>
+<div class="rc"><span>💵</span><div><h3 data-i="r1t"></h3><p data-i="r1"></p><div class="law">📜 Code on Wages, 2019</div><div class="docs">📎 <span data-i="rd1"></span></div></div></div>
+<div class="rc"><span>⏰</span><div><h3 data-i="r2t"></h3><p data-i="r2"></p><div class="law">📜 Code on Wages, 2019</div><div class="docs">📎 <span data-i="rd2"></span></div></div></div>
+<div class="rc"><span>🕐</span><div><h3 data-i="r3t"></h3><p data-i="r3"></p><div class="law">📜 OSH &amp; Working Conditions Code, 2020</div><div class="docs">📎 <span data-i="rd3"></span></div></div></div>
+<div class="rc"><span>🦺</span><div><h3 data-i="r4t"></h3><p data-i="r4"></p><div class="law">📜 OSH &amp; Working Conditions Code, 2020</div><div class="docs">📎 <span data-i="rd4"></span></div></div></div>
+<div class="rc"><span>🛡️</span><div><h3 data-i="r5t"></h3><p data-i="r5"></p><div class="law">📜 Code on Social Security, 2020 · e-Shram</div><div class="docs">📎 <span data-i="rd5"></span></div></div></div>
+</div></section>
+
+<section id="documents">
+<div class="card"><h2 class="t">📁 <span data-i="n_docs"></span></h2>
+<p data-i="docp"></p>
+<b id="dprog"></b><div class="bar"><div id="dbar"></div></div>
+<div id="dlist"></div></div>
+</section>
+
+<section id="help">
+<div class="card"><h2 class="t">📞 <span data-i="n_help"></span></h2>
+<div class="hl"><div><b>e-Shram</b><br><small data-i="d1"></small></div><a href="tel:14434">14434</a></div>
+<div class="hl"><div><b>NALSA</b><br><small data-i="d2"></small></div><a href="tel:15100">15100</a></div>
+<div class="hl"><div><b>Women</b><br><small data-i="d3"></small></div><a href="tel:181">181</a></div>
+<div class="hl"><div><b>Police</b><br><small data-i="d4"></small></div><a href="tel:112">112</a></div></div>
+<div class="card"><h2 class="t">✍️ <span data-i="cmp"></span></h2>
+<label data-i="nm"></label><input id="cn">
+<label data-i="emp"></label><input id="ce">
+<label data-i="amt"></label><input id="ca" type="number" min="0">
+<label data-i="since"></label><input id="cd" type="date">
+<button id="gen" data-i="gen"></button>
+<textarea id="cout" rows="9" style="margin-top:12px" hidden></textarea>
+<button id="cc" data-i="copy" hidden></button></div>
+</section>
+
+</main>
+<footer data-i="foot"></footer>
+<nav id="nav"></nav>
+
+<script src="script.js"></script>
+</body>
+</html>
